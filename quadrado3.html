@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="static/css/quadrado3.css">
 </head>
 <body>
+<a href="index.html" class="btn btn-voltar-floating" aria-label="Voltar ao menu">&larr; <span>Menu</span></a>
 <div class="container py-4">
     <div class="settings-box text-center">
         <h1 class="mb-4 text-center titulo">Quadrado com Somas Guiadas</h1>
@@ -24,12 +25,9 @@
         <form id="desafio-form" class="text-center" onsubmit="corrigirDesafio(event)">
             <div id="soma-grid" class="my-3"></div>
             <div id="copy-box" class="text-center mb-2"></div>
+            <button type="submit" class="btn btn-success btn-corrigir mt-3">✓ Corrigir respostas</button>
         </form>
-    </div>
-    <button type="submit" form="desafio-form" class="btn btn-success btn-corrigir mt-3">Corrigir</button>
-    <div id="feedback" class="mt-3 text-center"></div>
-    <div style="text-align: center;">
-        <a href="index.html" class="btn btn-outline-secondary mb-3 btn-voltar">&larr; Voltar ao Menu</a>
+        <div id="feedback" class="mt-3 text-center"></div>
     </div>
 </div>
 <script>

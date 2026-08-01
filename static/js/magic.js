@@ -42,7 +42,9 @@ function generateMagicSquareByStart(start = 1) {
     const base = baseMagicSquare3();
     const transforms = getAllMagicSquareTransforms(base);
     const chosen = transforms[Math.floor(Math.random() * transforms.length)];
-    const offset = Number(start || 1) - 1;
+    const parsedStart = Number(start);
+    const normalizedStart = Number.isFinite(parsedStart) ? parsedStart : 1;
+    const offset = normalizedStart - 1;
     return chosen.map(row => row.map(cell => cell + offset));
 }
 
@@ -51,7 +53,7 @@ function magicSum(n, start = 1) {
 }
 
 function magicSquareOdd(n, start = 1) {
-    const square = Array.from({ length: n }, () => Array(n).fill(0));
+    const square = Array.from({ length: n }, () => Array(n).fill(null));
     let num = start;
     let i = 0;
     let j = Math.floor(n / 2);
@@ -59,7 +61,7 @@ function magicSquareOdd(n, start = 1) {
         square[i][j] = num++;
         const newI = (i - 1 + n) % n;
         const newJ = (j + 1) % n;
-        if (square[newI][newJ] !== 0) {
+        if (square[newI][newJ] !== null) {
             i = (i + 1) % n;
         } else {
             i = newI;
