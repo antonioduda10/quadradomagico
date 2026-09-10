@@ -10,3 +10,5 @@ Projeto de quadrados mágicos preparado para rodar direto no GitHub Pages (ou qu
 ## Desenvolvimento local
 - Basta abrir `index.html` em um navegador; não precisa de servidor Python.
 - Se quiser rodar o Flask antigo, execute `python app.py` (opcional, só para referência).
+
+Autor: Antônio Duda Oliveira da Silva
