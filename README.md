@@ -1,4 +1,4 @@
-# Quadrado Mágico (GitHub Pages Ready)
+# Quadrado Mágico
 
 Projeto de quadrados mágicos preparado para rodar direto no GitHub Pages (ou qualquer host estático).
 
