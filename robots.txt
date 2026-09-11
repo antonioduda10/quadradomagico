@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quadradomagico.antonioduda.workers.dev/sitemap.xml
