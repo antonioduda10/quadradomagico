@@ -49,6 +49,7 @@
             <div id="feedback" class="mt-3 text-center"></div>
         </div>
     </div>
+<script src="static/js/auto-geracao.js"></script>
 <script>
     function getAllTransforms(square) {
         function rotate(sq) {
@@ -143,8 +144,7 @@
 
     function gerarDesafio() {
         document.getElementById('feedback').innerHTML = "";
-        const startVal = parseInt(document.getElementById('start').value, 10);
-        startAtual = Number.isNaN(startVal) ? 1 : startVal;
+        startAtual = Number(document.getElementById('start').value);
         quadradoAtual = gerarQuadrado(startAtual);
         respostaCorreta = quadradoAtual.flat();
         magicSum = quadradoAtual[0].reduce((a, b) => a + b, 0);
@@ -196,6 +196,7 @@
             : "<span class='alert alert-danger'>Ainda tem erros. Tente novamente!</span>";
     }
 
+    gerarDesafio = configurarGeracaoAutomatica(['start', 'visiveis'], gerarDesafio);
     window.onload = gerarDesafio;
 </script>
 </body>

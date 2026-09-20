@@ -25,6 +25,7 @@
     </div>
 </div>
 <script src="static/js/magic.js"></script>
+<script src="static/js/auto-geracao.js"></script>
 <script>
     function copyTexto(texto) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -39,8 +40,7 @@
     }
 
     function gerarQuadrado() {
-        const startVal = parseInt(document.getElementById('start').value, 10);
-        const start = Number.isNaN(startVal) ? 1 : startVal;
+        const start = Number(document.getElementById('start').value);
         const square = generateMagicSquareByStart(start);
         const magic = square[0].reduce((a, b) => a + b, 0);
 
@@ -60,6 +60,7 @@
             <div class="mt-1"><small class="text-muted">Formato tabulado pronto para colar</small></div>
         `;
     }
+    gerarQuadrado = configurarGeracaoAutomatica(['start'], gerarQuadrado);
     window.onload = gerarQuadrado;
 </script>
 </body>
